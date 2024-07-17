@@ -15,7 +15,7 @@ import (
 
 // Menu is the command that opens the knockback menu.
 type Menu struct {
-	Allower cmd.Allower
+	Allower cmd.Allower `cmd:"-"`
 }
 
 // Run ...
@@ -96,7 +96,7 @@ func (s *menuSubmittable) Submit(p *player.Player, it item.Stack) {
 }
 
 // Close ...
-func (s *menuSubmittable) Close() {
+func (s *menuSubmittable) Close(_ *player.Player) {
 	close(s.close)
 }
 
