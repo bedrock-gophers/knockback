@@ -41,6 +41,7 @@ func main() {
 
 	for srv.Accept(func(p *player.Player) {
 		inv.RedirectPlayerPackets(p, nil)
+		p.Handle(handler{})
 		p.SetGameMode(world.GameModeSurvival)
 	}) {
 
