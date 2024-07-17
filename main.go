@@ -6,10 +6,12 @@ import (
 	"github.com/df-mc/dragonfly/server"
 	"github.com/df-mc/dragonfly/server/block/cube"
 	"github.com/df-mc/dragonfly/server/cmd"
+	"github.com/df-mc/dragonfly/server/event"
 	"github.com/df-mc/dragonfly/server/player"
 	"github.com/df-mc/dragonfly/server/player/chat"
 	"github.com/df-mc/dragonfly/server/world"
 	"github.com/sirupsen/logrus"
+	"time"
 )
 
 func main() {
@@ -39,8 +41,21 @@ func main() {
 
 	for srv.Accept(func(p *player.Player) {
 		inv.RedirectPlayerPackets(p, nil)
-		p.SetGameMode(world.GameModeCreative)
+		p.SetGameMode(world.GameModeSurvival)
 	}) {
 
 	}
+}
+
+type handler struct {
+	player.NopHandler
+}
+
+func (handler) HandleHurt(ctx *event.Context, damage *float64, attackImmunity *time.Duration, src world.DamageSource) {
+	knockback.ApplyHitDelay(attackImmunity)
+}
+
+func (handler) HandleAttackEntity(ctx *event.Context, e world.Entity, force, height *float64, critical *bool) {
+	knockback.ApplyForce(force)
+	knockback.ApplyHeight(height)
 }
