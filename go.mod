@@ -8,7 +8,9 @@ require (
 )
 
 require (
-	github.com/bedrock-gophers/inv v0.1.0 // indirect
+	github.com/bedrock-gophers/intercept v0.1.2-0.20240720171111-5006c664eccd // indirect
+	github.com/bedrock-gophers/inv v0.2.2 // indirect
+	github.com/bedrock-gophers/unsafe v0.0.0-20240505195854-ea3c41bde898 // indirect
 	github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/df-mc/atomic v1.10.0 // indirect
@@ -29,7 +31,7 @@ require (
 	github.com/sandertv/gophertunnel v1.39.0 // indirect
 	github.com/segmentio/fasthash v1.0.3 // indirect
 	golang.org/x/crypto v0.24.0 // indirect
-	golang.org/x/exp v0.0.0-20240416160154-fe59bbe5cc7f // indirect
+	golang.org/x/exp v0.0.0-20240613232115-7f521ea00fb8 // indirect
 	golang.org/x/image v0.17.0 // indirect
 	golang.org/x/net v0.26.0 // indirect
 	golang.org/x/oauth2 v0.21.0 // indirect

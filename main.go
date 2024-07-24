@@ -1,6 +1,9 @@
 package main
 
 import (
+	"time"
+
+	"github.com/bedrock-gophers/intercept/intercept"
 	"github.com/bedrock-gophers/inv/inv"
 	"github.com/bedrock-gophers/knockback/knockback"
 	"github.com/df-mc/dragonfly/server"
@@ -11,7 +14,6 @@ import (
 	"github.com/df-mc/dragonfly/server/player/chat"
 	"github.com/df-mc/dragonfly/server/world"
 	"github.com/sirupsen/logrus"
-	"time"
 )
 
 func main() {
@@ -40,7 +42,7 @@ func main() {
 	inv.PlaceFakeContainer(srv.World(), cube.Pos{0, 255, 0})
 
 	for srv.Accept(func(p *player.Player) {
-		inv.RedirectPlayerPackets(p, nil)
+		intercept.Intercept(p)
 		p.Handle(handler{})
 		p.SetGameMode(world.GameModeSurvival)
 	}) {

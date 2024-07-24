@@ -1,5 +1,11 @@
+github.com/bedrock-gophers/intercept v0.1.2-0.20240720171111-5006c664eccd h1:D5yYnMP1BjBzNzQTcZUFGiUX957mbrKW0kLgVzoEYpE=
+github.com/bedrock-gophers/intercept v0.1.2-0.20240720171111-5006c664eccd/go.mod h1:O9x7OdMuTnKfqoCvqL0+xD9OwCmlPnyOvFo9Nq+Dg8E=
 github.com/bedrock-gophers/inv v0.1.0 h1:R7qZ8PMShtfMvB6nKE4HhZUPkalV8pQjVlF9/6b2SXo=
 github.com/bedrock-gophers/inv v0.1.0/go.mod h1:4ToPQjChIj0k813cOvUtKR6tfsDxvkddOTOBNP6bEvQ=
+github.com/bedrock-gophers/inv v0.2.2 h1:9OIBAxJP4MLwIzS12B6fVqAZIHSF8wZLqiIHoQORk6M=
+github.com/bedrock-gophers/inv v0.2.2/go.mod h1:m90OwadzNs0quxMRneAk/qq5/FmNVAUjoxUZeFJTn6w=
+github.com/bedrock-gophers/unsafe v0.0.0-20240505195854-ea3c41bde898 h1:PiKhXq+BcOiixOv25EzHApylKOOIH03qpUHk5NgbBts=
+github.com/bedrock-gophers/unsafe v0.0.0-20240505195854-ea3c41bde898/go.mod h1:v48j2kHfvemXKX4A1WFqzlgTnwBENAn2vQWlgk8mLJA=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 h1:/G0ghZwrhou0Wq21qc1vXXMm/t/aKWkALWwITptKbE0=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9/go.mod h1:TOk10ahXejq9wkEaym3KPRNeuR/h5Jx+s8QRWIa2oTM=
 github.com/cespare/xxhash/v2 v2.2.0 h1:DC2CZ1Ep5Y4k3ZQ899DldepgrayRUGE6BBZ/cd9Cj44=
@@ -93,6 +99,8 @@ golang.org/x/exp v0.0.0-20230206171751-46f607a40771 h1:xP7rWLUr1e1n2xkK5YB4LI0hP
 golang.org/x/exp v0.0.0-20230206171751-46f607a40771/go.mod h1:CxIveKay+FTh1D0yPZemJVgC/95VzuuOLq5Qi4xnoYc=
 golang.org/x/exp v0.0.0-20240416160154-fe59bbe5cc7f h1:99ci1mjWVBWwJiEKYY6jWa4d2nTQVIEhZIptnrVb1XY=
 golang.org/x/exp v0.0.0-20240416160154-fe59bbe5cc7f/go.mod h1:/lliqkxwWAhPjf5oSOIJup2XcqJaw8RGS6k3TGEc7GI=
+golang.org/x/exp v0.0.0-20240613232115-7f521ea00fb8 h1:yixxcjnhBmY0nkL253HFVIm0JsFHwrHdT3Yh6szTnfY=
+golang.org/x/exp v0.0.0-20240613232115-7f521ea00fb8/go.mod h1:jj3sYF3dwk5D+ghuXyeI3r5MFf+NT2An6/9dOA95KSI=
 golang.org/x/image v0.0.0-20190321063152-3fc05d484e9f/go.mod h1:kZ7UVZpmo3dzQBMxlp+ypCbDeSB+sBbTgSJuh5dn5js=
 golang.org/x/image v0.17.0 h1:nTRVVdajgB8zCMZVsViyzhnMKPwYeroEERRC64JuLco=
 golang.org/x/image v0.17.0/go.mod h1:4yyo5vMFQjVjUcVk4jEQcU9MGy/rulF5WvUILseCM2E=
