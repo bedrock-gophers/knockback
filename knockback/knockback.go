@@ -1,11 +1,14 @@
 package knockback
 
 import (
-	"github.com/go-gl/mathgl/mgl64"
-	"github.com/restartfu/gophig"
+	"errors"
 	"os"
 	"path/filepath"
+	"strings"
 	"time"
+
+	"github.com/go-gl/mathgl/mgl64"
+	"github.com/restartfu/gophig"
 )
 
 var (
@@ -13,6 +16,8 @@ var (
 	force, height = 0.4, 0.4
 	// hitDelay is the delay between hits.
 	hitDelay = 500 * time.Millisecond
+	// goph represents the gophig instance.
+	goph *gophig.Gophig
 )
 
 // settings is a struct that holds the settings for the knockback library.
@@ -24,6 +29,12 @@ type settings struct {
 
 // Load loads the settings from the file at the path passed.
 func Load(path string) error {
+	pathSplit := strings.Split(path, ".")
+	if len(pathSplit) < 2 {
+		return errors.New("could not find file extension in path")
+	}
+	goph = gophig.NewGophig(pathSplit[0], pathSplit[1], os.ModePerm)
+
 	s := settings{
 		Force:    force,
 		Height:   height,
@@ -31,7 +42,7 @@ func Load(path string) error {
 	}
 
 	_ = os.MkdirAll(filepath.Dir(path), 0777)
-	err := gophig.GetConfComplex(path, gophig.JSONMarshaler{}, &s)
+	err := goph.GetConf(&s)
 	if err != nil {
 		if os.IsNotExist(err) {
 			save()
@@ -68,5 +79,5 @@ func save() {
 	}
 
 	_ = os.MkdirAll(filepath.Dir("assets/knockback.json"), 0777)
-	_ = gophig.SetConfComplex("assets/knockback.json", gophig.JSONMarshaler{Indent: true}, s, os.ModePerm)
+	_ = goph.SetConf(s)
 }
