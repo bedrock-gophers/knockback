@@ -7,6 +7,7 @@ import (
 	"github.com/df-mc/dragonfly/server/cmd"
 	"github.com/df-mc/dragonfly/server/item"
 	"github.com/df-mc/dragonfly/server/player"
+	"github.com/df-mc/dragonfly/server/world"
 	"github.com/sandertv/gophertunnel/minecraft/text"
 	"strconv"
 	"strings"
@@ -19,7 +20,7 @@ type Menu struct {
 }
 
 // Run ...
-func (m Menu) Run(src cmd.Source, _ *cmd.Output) {
+func (m Menu) Run(src cmd.Source, _ *cmd.Output, _ *world.Tx) {
 	p, ok := src.(*player.Player)
 	if !ok {
 		return
